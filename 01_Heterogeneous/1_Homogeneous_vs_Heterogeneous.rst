@@ -31,7 +31,7 @@ Challenges using accelerators in a heterogeneous computing environment
 
 3. Load balancing: In a heterogeneous system, workload distribution and load balancing become more complex due to the diverse capabilities of different processing units. Proper load balancing is essential to fully utilize the system's resources.
 
-Software Development Techniques:
+Software Development Techniques
 =================================
 
 The software development techniques for homogeneous and heterogeneous computing have typically required different approaches in the past.
