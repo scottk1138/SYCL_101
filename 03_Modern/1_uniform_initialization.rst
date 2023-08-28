@@ -1,9 +1,9 @@
 Uniform Initialization
 #######################
 
-This chapter talks about uniform initialization. You will learn:
+This chapter talks about uniform initialization. You will learn he following:
 
-#.	What is uniform initialization and how to use it?
+#.	What is uniform initialization and how is it used?
 #. Why should you use uniform initialization?
 #. What are the common problems with uniform initialization? 
 
@@ -15,10 +15,10 @@ In modern C++ there is a uniform method for initializing data called **uniform i
 Expression initialization 
 =========================
 
-To better understand the concept let's get familiar with:
+To better understand the concept, let's get familiar with the following:
 
-* **direct initialization** - which uses an explicit set of constructor arguments to create an object,
-* **copy initialization** - which uses another object to initialize an object.
+* **direct initialization**, which uses an explicit set of constructor arguments to create an object.
+* **copy initialization**, which uses another object to initialize an object.
 
 The code below shows both direct and copy initialization:
 
@@ -30,9 +30,8 @@ The code below shows both direct and copy initialization:
 Brace-initialization
 ====================
 
-To uniformly initialize objects of any type, use the **brace-initialization form {}**, 
-it may be used for both direct and copy initialization. When used with brace-initialization, 
-we call them direct-list and copy-list-initialization. 
+To uniformly initialize objects of any type, **brace-initialization form {}** may be used for both direct and copy initialization. When used with brace-initialization, 
+we call them[[[for clarity, can "them" be "these objects"? Is that correct?]]] direct-list and copy-list initialization. 
 
 The code below shows both direct-list and copy-list initialization:
 
@@ -41,7 +40,7 @@ The code below shows both direct-list and copy-list initialization:
    std::string direct{"direct-list initialization"};
    std::string copy = {"copy-list initialization"};
 
-Let's take a look on uniform initialization on different build-in and custom types:
+Let's take a look at uniform initialization on different build-in and custom types:
 
 #. Build-in types:
 
@@ -62,7 +61,7 @@ Let's take a look on uniform initialization on different build-in and custom typ
 
       int* my_array = new int[5]{0, 1, 2, 3, 4};
 
-#. Standard Library containers:
+#. Standard library containers:
 
    .. code-block:: cpp
 
@@ -95,7 +94,7 @@ Consistent syntax
 =================
 
 The first is **very consistent syntax**.
-To show it in example, we already know that there is a lot of different way how to initialize the variable.
+To exemplify, there are different ways to initialize the variable.
 
 .. code-block:: cpp
 
@@ -105,10 +104,10 @@ To show it in example, we already know that there is a lot of different way how 
    int i = {1}; // copy-list initialization
    auto i{1};   // direct initialization of type deduced to int 
 
-For simple type initialization it is not the problem to use the historically the most common way but
-when we are using different more complicated custom types the consistent syntax can really change 
+For simple type initialization, it is not a problem to use the common method. But
+when we are using different, more complicated custom types, the consistent syntax can really change 
 the experience with code. This can be especially important if you consider generic code that should 
-be able to initialize any type - it will be not possible with :code:`()` initialization.
+be able to initialize any type — it will be not possible with :code:`()` initialization.
 
 .. code-block:: cpp
 
@@ -124,7 +123,7 @@ Narrowing conversions are not allowed
 
 The second benefit is that uniform initialization **does not allow narrowing conversions**.
 
-Before uniform initialization, with C-style C++ the code below will be fine, and double will just 
+Before uniform initialization, with C-style C++, the code below will be fine, and double will just 
 convert to int.
 
 .. code-block:: cpp
