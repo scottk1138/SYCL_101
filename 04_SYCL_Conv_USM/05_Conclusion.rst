@@ -3,8 +3,8 @@ Conclusion
 
 
 
-Throughout our examination, we will draw comparisons between 
-these two approaches, highlighting the advantages that USM with 
+Throughout our examination, we will draw[[[since this is the Conclusion, should it say "we drew"?]]] comparisons between 
+the vector_add and vector_add_USM approaches[[[you mean these approaches?]]], highlighting the advantages that USM with 
 SYCL brings to the table. By understanding the differences and 
 benefits of these methodologies, developers can make informed 
 decisions about selecting the most suitable approach for their 
